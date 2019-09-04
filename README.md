@@ -17,4 +17,5 @@ And the paper could be downloaded from "http://openaccess.thecvf.com/content_ECC
     `https://github.com/junjieAI/PFPNet_Pytorch.git`  
 
 2. Build the Cython modules, [ We can refer to Faster-Rcnn approach](https://github.com/rbgirshick/py-faster-rcnn).  
-        `cd $PFPNet_Pytorch/lib  make`
+        `<cd $PFPNet_Pytorch/lib>`  
+        `<make>`
