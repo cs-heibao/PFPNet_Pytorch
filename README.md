@@ -59,4 +59,4 @@ And the paper could be downloaded from "http://openaccess.thecvf.com/content_ECC
                 # It will create model definition files and save snapshot models in:
                 #   - $PFPNet_Pytorch/weights/PFPNet{input_size}_VOC_{iteration}.pth/
                 # and the loss log in:
-                #   - $PFPNet_Pytorch/'{}_{}_{}_{}:{}:{}loss.txt'.format(log_time.year, log_time.month,                   log_time.day,log_time.hour,'%02d'%log_time.minute, '%02d'%log_time.second)
+                #   - $PFPNet_Pytorch/'{}_{}_{}_{}:{}:{}loss.txt'.format(log_time.year, log_time.month, log_time.day,log_time.hour,'%02d'%log_time.minute, '%02d'%log_time.second)
