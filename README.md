@@ -29,8 +29,11 @@ And the paper could be downloaded from "http://openaccess.thecvf.com/content_ECC
   
 5. Prepare the data basic structure.   
         ```
-        11  
-        22  
-        33  
-        ```
+        $VOCdevkit/                           # development kit  
+        $VOCdevkit/VOC2012                    # image sets, annotations, etc.  
+        $VOCdevkit/VOC2012/Annotations                       # include .xml files.  
+        $VOCdevkit/VOC2012/ImageSets/Main                    # include trainval.txt file.  
+        $VOCdevkit/VOC2012/JPEGImages                        # include images.  
+        ```  
+        
 
