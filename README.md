@@ -19,5 +19,6 @@ And the paper could be downloaded from "http://openaccess.thecvf.com/content_ECC
 2. Build the Cython modules, [ We can refer to Faster-Rcnn approach](https://github.com/rbgirshick/py-faster-rcnn).  
         ```  
         cd $PFPNet_Pytorch/lib  
+        ```  
         make  
         ```
