@@ -25,5 +25,7 @@ And the paper could be downloaded from "http://openaccess.thecvf.com/content_ECC
         ```  
 3. Download the [basenet model VGGNET.](https://s3.amazonaws.com/amdegroot-models/vgg16_reducedfc.pth) By default, we assume the model is stored in `$PFPNet_Pytorch/pretrained`.  
   
-4. Download the [trained model](https://pan.baidu.com/s/1aa-Mar-DRESuihU3wbOgVQ) by my own dataset(just to detect cars).  
+4. Download the [trained model](https://pan.baidu.com/s/1aa-Mar-DRESuihU3wbOgVQ) of myself Extract code: fh9uby.  
+  
+5. 
 
