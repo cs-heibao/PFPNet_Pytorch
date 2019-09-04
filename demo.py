@@ -80,8 +80,8 @@ model = torch.nn.DataParallel(net, device_ids=gpus).cuda()
 
 # here we specify year (07 or 12) and dataset ('test', 'val', 'train')
 
-images_path = '/media/jie/Work/project/Train_Data/cidi_lane_6mm/cidi_lane_6mm/6mm_L/days/'
-result_path = '/home/jie/project/rename_004_result'
+images_path = '**/testfolder/'
+result_path = '**/testfolder_result'
 if not os.path.exists(result_path):
     os.makedirs(result_path)
 images = os.listdir(images_path)
@@ -112,11 +112,6 @@ for image_name in images:
     print('INFO: Detection Time is: {}'.format(time.time() - detect_start))
 
     top_k=10
-
-    # plt.figure(figsize=(10,10))
-    # colors = plt.cm.hsv(np.linspace(0, 1, 21)).tolist()
-    # plt.imshow(rgb_image)  # plot the image for matplotlib
-    # currentAxis = plt.gca()
 
     detections = y.data
     # scale each detection back up to the image
