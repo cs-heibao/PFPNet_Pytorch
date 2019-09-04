@@ -37,9 +37,9 @@ parser.add_argument('--input_size', default='512', type=str,
                     help='PFP512')
 parser.add_argument('--num_class', default=2, type=int,
                     help='num_class')
-parser.add_argument('--dataset_root', default='/home/jie/project/CiDi/RefineDet_PyTorch_master/data/datasets/VOCdevkit',
+parser.add_argument('--dataset_root', default='RootPath',
                     help='Dataset root directory path')
-parser.add_argument('--basenet', default='/home/jie/project/CiDi/RefineDet_PyTorch_master/weights/vgg16_reducedfc.pth',
+parser.add_argument('--basenet', default='./pretained/vgg16_reducedfc.pth',
                     help='Pretrained base model')
 parser.add_argument('--batch_size', default=8, type=int,
                     help='Batch size for training')
