@@ -5,16 +5,19 @@ And the paper could be downloaded from "http://openaccess.thecvf.com/content_ECC
 
 
 # Contents
-- [1.Requirements:software](#requirement:software)
+- [1.Experimental Environment](#experimental environment)
 
-- [2.Requirements:hardware](#requirement:hardware)
+- [2.Preparation](#preparation)
 
-- [3.Preparation](#preparation)
+- [3.Training](#training)
 
-- [4.Training](#training)
-
-- [5.Demo](#demo)
-
+- [4.Demo](#demo)
+# Experimental Environment
+        
+        Python3.5
+        Pytorch1.1.0
+        GPU:1080Ti
+        
 # Preparation
 1. Get the code. We will call the cloned directory as `$PFPNet_Pytorch`.  
 
