@@ -29,7 +29,7 @@ And the paper could be downloaded from "http://openaccess.thecvf.com/content_ECC
   
 5. Prepare the data basic structure.   
         
-        $VOCdevkit/                           # development kit  
+        $VOCdevkit/                           # RootPath  
         
         $VOCdevkit/VOC2012                    # image sets, annotations, etc.  
         
