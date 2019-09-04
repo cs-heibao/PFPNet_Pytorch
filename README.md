@@ -14,6 +14,6 @@ And the paper could be downloaded from "http://openaccess.thecvf.com/content_ECC
 # Preparation
 1. Get the code. We will call the cloned directory as `$PFPNet_Pytorch`.  
 
-`https://github.com/junjieAI/PFPNet_Pytorch.git`  
+    `https://github.com/junjieAI/PFPNet_Pytorch.git`  
 
 2. 
