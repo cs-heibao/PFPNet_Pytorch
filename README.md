@@ -54,7 +54,7 @@ And the paper could be downloaded from "http://openaccess.thecvf.com/content_ECC
                 cd $PFPNet_Pytorch
                 python3 train_PFPNet.py
                 
-2. Train results.
+2. Train results, it will create two types file, .pth model and loss log file.
                 
                 # It will create model definition files and save snapshot models in:
                 #   - $PFPNet_Pytorch/weights/PFPNet{input_size}_VOC_{iteration}.pth/
