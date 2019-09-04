@@ -48,5 +48,15 @@ And the paper could be downloaded from "http://openaccess.thecvf.com/content_ECC
         
         $VOCdevkit/VOC2012/JPEGImages                        # include images.  
         
-        
-
+# Training
+1. Train your model on PASCAL VOC Format.
+                
+                cd $PFPNet_Pytorch
+                python3 train_PFPNet.py
+                
+2. Train results.
+                
+                # It will create model definition files and save snapshot models in:
+                #   - $PFPNet_Pytorch/weights/PFPNet{input_size}_VOC_{iteration}.pth/
+                # and the loss log in:
+                #   - $PFPNet_Pytorch/'{}_{}_{}_{}:{}:{}loss.txt'.format(log_time.year, log_time.month,                                                         log_time.day,log_time.hour,'%02d'%log_time.minute, '%02d'%log_time.second)
