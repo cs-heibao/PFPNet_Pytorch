@@ -5,11 +5,15 @@ And the paper could be downloaded from "http://openaccess.thecvf.com/content_ECC
 
 
 # Contents
-- [1.Preparation](#preparation)
+- [1.Requirements:software](#requirement:software)
 
-- [2.Training](#training)
+- [2.Requirements:hardware](#requirement:hardware)
 
-- [3.Demo](#demo)
+- [3.Preparation](#preparation)
+
+- [4.Training](#training)
+
+- [5.Demo](#demo)
 
 # Preparation
 1. Get the code. We will call the cloned directory as `$PFPNet_Pytorch`.  
