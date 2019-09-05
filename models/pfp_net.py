@@ -1,7 +1,7 @@
 # ------------------------------------------------------------------------------
 # Copyright (c) Microsoft Corporation. All rights reserved.
 # Licensed under the MIT License.
-# Written by Junjie Zhao (zhao.jj@cidi.ai)
+# Written by cs-heibao 2019.02
 # ------------------------------------------------------------------------------
 
 import torch
@@ -107,73 +107,6 @@ class vgg(nn.Module):
         # out = self.pool5(out)
 
         return conv4, out
-
-# class SpatialPyramidPooling2d(nn.Module):
-#      r"""apply spatial pyramid pooling over a 4d input(a mini-batch of 2d inputs
-#  8     with additional channel dimension) as described in the paper
-#  9     'Spatial Pyramid Pooling in deep convolutional Networks for visual recognition'
-# 10     Args:
-# 11         num_level:
-# 12         pool_type: max_pool, avg_pool, Default:max_pool
-# 13     By the way, the target output size is num_grid:
-# 14         num_grid = 0
-# 15         for i in range num_level:
-# 16             num_grid += (i + 1) * (i + 1)
-# 17         num_grid = num_grid * channels # channels is the channel dimension of input data
-# 18     examples:
-# 19         >>> input = torch.randn((1,3,32,32), dtype=torch.float32)
-# 20         >>> net = torch.nn.Sequential(nn.Conv2d(in_channels=3,out_channels=32,kernel_size=3,stride=1),\
-# 21                                       nn.ReLU(),\
-# 22                                       SpatialPyramidPooling2d(num_level=2,pool_type='avg_pool'),\
-# 23                                       nn.Linear(32 * (1*1 + 2*2), 10))
-# 24         >>> output = net(input)
-# 25     """
-#
-#      def __init__(self, num_level, pool_type='max_pool'):
-#          super(SpatialPyramidPooling2d, self).__init__()
-#          self.num_level = num_level
-#          self.pool_type = pool_type
-#
-#      def forward(self, x):
-#          N, C, H, W = x.size()
-#          for i in range(self.num_level):
-#              level = i + 1
-#              kernel_size = (ceil(H / level), ceil(W / level))
-#              stride = (ceil(H / level), ceil(W / level))
-#              padding = (floor((kernel_size[0] * level - H + 1) / 2), floor((kernel_size[1] * level - W + 1) / 2))
-#
-#              if self.pool_type == 'max_pool':
-#                  # tensor = (F.max_pool2d(x, kernel_size=kernel_size, stride=stride, padding=padding)).view(N, -1)
-#                  tensor = (F.max_pool2d(x, kernel_size=kernel_size, stride=stride, padding=padding))
-#              else:
-#                  # tensor = (F.avg_pool2d(x, kernel_size=kernel_size, stride=stride, padding=padding)).view(N, -1)
-#                  tensor = (F.avg_pool2d(x, kernel_size=kernel_size, stride=stride, padding=padding))
-#
-#              if i == 0:
-#                  res = tensor
-#              else:
-#                  res = torch.cat((res, tensor), 1)
-#          return res
-
-# class SPPNet1(nn.Module):
-#      def __init__(self, num_level=3, pool_type='max_pool'):
-#          super(SPPNet1,self).__init__()
-#          self.num_level = num_level
-#          self.pool_type = pool_type
-#
-#          # self.num_grid = self._cal_num_grids(num_level)
-#          self.spp_layer = SpatialPyramidPooling2d(num_level)
-#
-#      def _cal_num_grids(self, level):
-#          count = 0
-#          for i in range(level):
-#              count += (i + 1) * (i + 1)
-#          return count
-#
-#      def forward(self, x):
-#          x = self.spp_layer(x)
-#          print(x.size())
-#          return x
 
 class SppNet(nn.Module):
     def __init__(self, layers):
@@ -320,10 +253,3 @@ from PIL import Image
 # model = torch.nn.DataParallel(model, device_ids=[0]).cuda()
 # model.train()
 #
-#
-# input = Image.open('/home/jie/project/CIDI/PFP_net/000000.jpg')
-# input = transform(input).unsqueeze(0)
-# input = input.type(torch.FloatTensor).cuda()
-# out_put = model(input)
-# arm_loss_l, arm_loss_c = arm_criterion(out_put, targets)
-# print(model)
