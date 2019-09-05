@@ -1,7 +1,7 @@
 # ------------------------------------------------------------------------------
 # Copyright (c) Microsoft Corporation. All rights reserved.
 # Licensed under the MIT License.
-# Written by Junjie Zhao (zhao.jj@cidi.ai)
+# Written by cs-heibao 2019.02
 # ------------------------------------------------------------------------------
 
 import torch
