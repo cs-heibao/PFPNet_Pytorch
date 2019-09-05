@@ -62,8 +62,8 @@ And the paper could be downloaded from "http://openaccess.thecvf.com/content_ECC
         #   - $PFPNet_Pytorch/'{}_{}_{}_{}:{}:{}loss.txt'.format(log_time.year, log_time.month, log_time.day,log_time.hour,'%02d'%log_time.minute, '%02d'%log_time.second)
 
 # Demo
-1. Visualize  
+1. Visualization.  
                 
         cd $PFPNet_Pytorch
         python3 demo.py
-        
+2. The script vis_loss.py is just to visualize the loss log.  
