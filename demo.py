@@ -86,7 +86,6 @@ if not os.path.exists(result_path):
     os.makedirs(result_path)
 images = os.listdir(images_path)
 count = 0
-# image = cv2.imread('/home/jie/project/CIDI/PFP_net/000040L.jpg')
 for image_name in images:
     count+=1
     print(count)
