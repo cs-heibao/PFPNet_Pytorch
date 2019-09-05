@@ -67,5 +67,5 @@ And the paper could be downloaded from "http://openaccess.thecvf.com/content_ECC
         cd $PFPNet_Pytorch
         python3 demo.py
         
-<div align=center><img width="640" height="480" src="https://github.com/cs-heibao/PFPNet_Pytorch/blob/master/images/20180720114451191_019947L.jpg"/></div>
+<div align=center><img width="480" height="640" src="https://github.com/cs-heibao/PFPNet_Pytorch/blob/master/images/20180720114451191_019947L.jpg"/></div>
 
