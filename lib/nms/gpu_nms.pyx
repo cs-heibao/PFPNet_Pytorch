@@ -1,9 +1,12 @@
-# --------------------------------------------------------
-# Faster R-CNN
-# Copyright (c) 2015 Microsoft
-# Licensed under The MIT License [see LICENSE for details]
-# Written by Ross Girshick
-# --------------------------------------------------------
+# ------------------------------------------------------------------------------
+# Copyright (c) Microsoft
+# Licensed under the MIT License.
+# Written by Bin Xiao (Bin.Xiao@microsoft.com)
+# ------------------------------------------------------------------------------
+
+from __future__ import absolute_import
+from __future__ import division
+from __future__ import print_function
 
 import numpy as np
 cimport numpy as np
@@ -22,8 +25,8 @@ def gpu_nms(np.ndarray[np.float32_t, ndim=2] dets, np.float thresh,
         keep = np.zeros(boxes_num, dtype=np.int32)
     cdef np.ndarray[np.float32_t, ndim=1] \
         scores = dets[:, 4]
-    cdef np.ndarray[np.int_t, ndim=1] \
-        order = scores.argsort()[::-1]
+    cdef np.ndarray[np.int32_t, ndim=1] \
+        order = scores.argsort()[::-1].astype(np.int32)
     cdef np.ndarray[np.float32_t, ndim=2] \
         sorted_dets = dets[order, :]
     _nms(&keep[0], &num_out, &sorted_dets[0, 0], boxes_num, boxes_dim, thresh, device_id)
